@@ -5,4 +5,19 @@
     <artifact name="ThrottleProxy_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
         <file>src/main/resources/metadata/ThrottleProxy_proxy_metadata.yaml</file>
     </artifact>
+    <artifact name="Dummy" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/Dummy.xml</file>
+    </artifact>
+    <artifact name="Dummy_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Dummy_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="HiRollerbankAccountWS" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/HiRollerbankAccountWS.xml</file>
+    </artifact>
+    <artifact name="CachingProxy" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/CachingProxy.xml</file>
+    </artifact>
+    <artifact name="CachingProxy_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CachingProxy_proxy_metadata.yaml</file>
+    </artifact>
 </artifacts>

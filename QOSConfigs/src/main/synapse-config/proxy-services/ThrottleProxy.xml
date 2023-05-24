@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <proxy name="ThrottleProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
     <target>
-        <endpoint name="endpoint_urn_uuid_b535a169-111d-4415-a3c8-5d45cdc39354">
-            <address uri="http://backend.yenlo.training:9766/HiRollerBankWS/services/accounts">
-                <suspendOnFailure>
-                    <initialDuration>-1</initialDuration>
-                    <progressionFactor>1</progressionFactor>
-                </suspendOnFailure>
-                <markForSuspension>
-                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
-                </markForSuspension>
-            </address>
-        </endpoint>
         <inSequence>
             <throttle id="dddd">
                 <policy>

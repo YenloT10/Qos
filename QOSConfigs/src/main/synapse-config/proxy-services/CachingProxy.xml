@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="CachingProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_7ffe1bc2-9ad2-46dd-b7bd-9da3402d3e63">
+            <address uri="http://localhost:8280/services/Dummy">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>1</progressionFactor>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </address>
+        </endpoint>
+        <inSequence>
+            <cache collector="false" maxMessageSize="2000" timeout="120">
+                <onCacheHit/>
+                <protocol type="HTTP">
+                    <methods>*</methods>
+                    <headersToExcludeInHash/>
+                    <headersToIncludeInHash/>
+                    <responseCodes>.*</responseCodes>
+                    <enableCacheControl>false</enableCacheControl>
+                    <includeAgeHeader>false</includeAgeHeader>
+                    <hashGenerator>org.wso2.carbon.mediator.cache.digest.HttpRequestHashGenerator</hashGenerator>
+                </protocol>
+                <implementation maxSize="1000"/>
+            </cache>
+        </inSequence>
+        <outSequence>
+            <cache collector="true"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

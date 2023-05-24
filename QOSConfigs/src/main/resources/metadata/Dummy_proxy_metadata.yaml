@@ -1,0 +1,10 @@
+---
+key: "Dummy_proxy-1.0.0"
+name : "Dummy"
+displayName : "Dummy"
+description: "Sample Proxy Service"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/services/Dummy"
+definitionType: "WSDL1"
+securityType: "BASIC"
+mutualSSLEnabled: false
